@@ -9,13 +9,13 @@ function log(msg) {
     sometext.innerHTML += msg + "\n";
 }
 
-function startRecording(stream, lengthInMS) {
+function startRecording(stream) {
     let recorder = new MediaRecorder(stream);
     let data = [];
   
     recorder.ondataavailable = event => data.push(event.data);
     recorder.start();
-    log(recorder.state + " for " + (lengthInMS/1000) + " seconds...");
+    log(recorder.state);
   
     let stopped = new Promise((resolve, reject) => {
       recorder.onstop = resolve;
@@ -45,7 +45,7 @@ if(startButton){
       downloadButton.href = stream;
       videoElem.captureStream = videoElem.captureStream || videoElem.mozCaptureStream;
       return new Promise(resolve => videoElem.onplaying = resolve);
-    }).then(() => startRecording(videoElem.captureStream(), recordingTimeMS))
+    }).then(() => startRecording(videoElem.captureStream()))
     .then (recordedChunks => {
       let recordedBlob = new Blob(recordedChunks, { type: "video/mp4" });
       videoDwn.src = URL.createObjectURL(recordedBlob);
