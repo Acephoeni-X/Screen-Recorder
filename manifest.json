@@ -1,0 +1,19 @@
+{
+    "name": "NASA picture of the day viewer",
+    "version": "0.0.0.1",
+    "manifest_version": 3,
+    "description": "A chromium extension to display the NASA picture of the day.",
+    
+
+    "content_scripts": [
+        {
+            "matches": [
+              "<all_urls>"
+            ],
+            "js": ["content.js"]
+        }
+    ],
+    
+    "options_page": "index.html"
+}
+
