@@ -7,6 +7,8 @@
     <title>Screen Recorder</title>
     <style>
         body{
+            height: 100%;
+            width: 100%;
             margin-top: 12rem;
             background-color: grey;
             color: white;
@@ -90,6 +92,7 @@
             font-size: 2rem;
         }
         .options{
+            margin-top: 2rem;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -112,6 +115,10 @@
             #stop{
                 margin: 0px;
                 margin-bottom: 1.5rem;
+            }
+            .options{
+                display: flex;
+                flex-direction: column;
             }
         }
     </style>
@@ -140,8 +147,9 @@
                 <button id="stop" >Stop Recording</button>
                 <a id="download" class="button">Download</a>
             </section>
-            <section id="sometext" style="margin-top: 5rem; font-size: 20px;"></section>
+            
         </div>
+        <section id="sometext" style="margin-top: 5rem; font-size: 20px;"></section>
     </div>
 </body>
 <script src="content.js"></script>
