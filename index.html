@@ -15,22 +15,22 @@
         }
         #video{
             border: 1px solid white;
-            min-width: 400px;
-            max-width: 400px;
-            margin-right: 2rem;
+            width: calc(100vw - 70vw);
+            min-width: 300px;
+            
         }
         #video-dwn{
             border: 1px solid white;
-            min-width: 400px;
-            max-width: 400px;
+            width: calc(100vw - 70vw);
+            min-width: 300px;
         }
         .buttons{
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: center;
-            margin-top: 3rem;
-            margin-right: 3rem;
+            /* margin-top: 3rem;
+            margin-right: 3rem; */
         }
         #start{
             margin-right: 5rem;
@@ -45,13 +45,14 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            /* width: calc(100vw - 20vw); */
         }
         #download{
-            border: 1px solid black;
+            border: 1.4px solid rgb(124, 124, 124);
             padding: 0.1rem;
             padding-left: 0.7rem;
             padding-right: 0.7rem;
-            border-radius: 12%;
+            border-radius: 4px;
             color:black;
             background-color: white;
             cursor: pointer;
@@ -67,32 +68,53 @@
             font-size: 30px;
         }
         .name{
-            margin-right: 10rem;
-            margin-left: 6rem;
+            /* margin-right: 5rem; */
         }
         .video-sec{
-            margin: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+        }
+        .text{
+            font-size: 2rem;
+        }
+        .options{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        @media only screen and (max-width: 800px){
+            .video-sec{
+                justify-content: center;
+            }
         }
     </style>
 </head>
 <body>
     <div class="items">
-        <div class="naming">
-            <section class="name">Screen Sharing</section>
-            <section class="name">Preview</section>
-        </div>
-        <div class="video-frames">
+ 
             <section class="video-sec">
-                <video src="" id="video" autoplay muted></video>
-                <video src="" id="video-dwn" autoplay muted></video>
+
+                <section class="name">
+                    <div class="text">Screen Sharing</div>
+                    <video src="" id="video" autoplay muted></video>
+                </section>
+
+                <section class="name">
+                    <div class="text">Preview</div>
+                    <video loop='true' src="" id="video-dwn" autoplay muted></video>
+                </section>
+
             </section>
-        </div>
+
 
         <div class="options">
             <section class="buttons">
                 <button id="start" >Start Recording</button>
                 <button id="stop" >Stop Recording</button>
-                <a id="download">Download</a>
+                <a id="download" class="button">Download</a>
             </section>
             <section id="sometext" style="margin-top: 5rem; font-size: 20px;"></section>
         </div>
