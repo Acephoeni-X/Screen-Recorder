@@ -35,10 +35,18 @@
         #start{
             margin-right: 5rem;
             cursor: pointer;
+            background-color: white;
+        }
+        #start:hover{
+            box-shadow: 0px 0px 5px 5px green;
         }
         #stop{
             margin-right: 5rem;
             cursor: pointer;
+            background-color: white;
+        }
+        #stop:hover{
+            box-shadow: 0px 0px 5px 5px green;
         }
         .items{
             display: flex;
@@ -50,8 +58,8 @@
         #download{
             border: 1.4px solid rgb(124, 124, 124);
             padding: 0.1rem;
-            padding-left: 0.7rem;
-            padding-right: 0.7rem;
+            padding-left: 1.3rem;
+            padding-right: 1.2rem;
             border-radius: 4px;
             color:black;
             background-color: white;
@@ -60,6 +68,7 @@
         }
         #download:hover{
             background-color: rgb(219, 218, 218);
+            box-shadow: 0px 0px 5px 5px green;
         }
         .naming{
             display: flex;
@@ -88,6 +97,21 @@
         @media only screen and (max-width: 800px){
             .video-sec{
                 justify-content: center;
+            }
+            .text{
+                font-size: 1.5rem;
+            }
+            .buttons{
+                flex-direction: column;
+            }
+            #start{
+                margin: 0px;
+                margin-top: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+            #stop{
+                margin: 0px;
+                margin-bottom: 1.5rem;
             }
         }
     </style>
