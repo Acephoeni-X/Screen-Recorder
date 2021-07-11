@@ -10,10 +10,12 @@
             "matches": [
               "<all_urls>"
             ],
-            "js": ["content.js"]
+            "js": ["index.js"]
         }
     ],
-    
+    "icons": {
+        "128": "diaphragm.png"
+      },
     "options_page": "index.html"
 }
 
