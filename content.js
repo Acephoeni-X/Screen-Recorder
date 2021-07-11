@@ -6,6 +6,7 @@ let downloadButton = document.querySelector("#download");
 let sometext = document.querySelector("#sometext");
 
 function log(msg) {
+    sometext.innerHTML = "";
     sometext.innerHTML += msg + "\n";
 }
 
@@ -52,7 +53,7 @@ if(startButton){
       downloadButton.href = videoDwn.src;
       downloadButton.download = "RecordedVideo.mp4";
   
-      log("Successfully recorded " + recordedBlob.size + " bytes of " +
+      log("Successfully recorded " +  Math.floor(Math.floor(recordedBlob.size)/ Math.floor(1024)) + " bytes of " +
           recordedBlob.type + " media.");
     })
     .catch(log);
